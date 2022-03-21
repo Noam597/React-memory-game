@@ -1,0 +1,9 @@
+.header{
+    background-image:linear-gradient(to bottom,green,#29b829, lightgreen);
+    text-align: center;
+}
+
+.header h1{
+    font-size: 50px;
+}
+

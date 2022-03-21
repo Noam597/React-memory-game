@@ -1,0 +1,8 @@
+.app {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(196, 238, 255);
+}
+
+
