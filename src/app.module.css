@@ -1,14 +1,15 @@
 .app {
+  background-image: radial-gradient(silver,lightblue,blue);
   text-align: center;
-  display: flex;
+  display: grid;
   flex-direction: column;
-  background-color: rgb(196, 238, 255);
+  
 }
 
 
 @media only screen and (width: 768px) {
-    .app{
+    /* .app{
       width: 100%;
       
-    }
+    } */
 }

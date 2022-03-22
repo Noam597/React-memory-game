@@ -8,7 +8,7 @@ function App() {
   return (
     <div className={styles.app}>
       <Header/>
-     <MemoryGame/>
+      <MemoryGame/>
       <Footer/>
     </div>
   );
