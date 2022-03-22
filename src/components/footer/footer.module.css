@@ -12,3 +12,10 @@
 .footer p{
     color: #bebbbb;
 }
+
+@media only screen and (width: 768px) {
+    .footer{
+        width: 98%;
+        margin: 1%;
+    }
+}

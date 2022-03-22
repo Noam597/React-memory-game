@@ -6,3 +6,9 @@
 }
 
 
+@media only screen and (width: 768px) {
+    .app{
+      width: 100%;
+      
+    }
+}
