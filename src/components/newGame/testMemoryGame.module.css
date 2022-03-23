@@ -128,11 +128,38 @@
     height: 30px;
     border-radius: 5px;
 }
-
-@media only screen and (max-width: 480px) {
+ @media only screen and (max-width:1024px) {
     .tablesize{
+        width: 98%;
+        margin: 1%;
+        gap: 2px;
+    }
+    .cardSize{
+        width: 100px;
+        height: 100px;
+    }
+ 
+    .stats{
         width: 100%;
        
+    }
+    .start{
+        width: 100%;
+        font-size: 30px; 
+      left: 0;
+        
+     }
+     .won{
+        width: 100%;
+        font-size: 30px; 
+        left: 0;
+     }
+
+ }
+@media only screen and (max-width: 480px) {
+    .tablesize{
+        width: 98%;
+       margin: 1%;
         gap: 2px;
     }
     .cardSize{
@@ -146,26 +173,4 @@
        width: 100%;
       
    }
- }
- @media only screen and (max-width:1024px) {
-    .tablesize{
-        width: 100%;
-       
-        gap: 2px;
-    }
-    .cardSize{
-        width: 100px;
-        height: 100px;
-    }
-    .stats{
-        width: 100%;
-       
-    }
-    .start{
-        width: 100%;
-        font-size: 30px; 
-      left: 0;
-        
-     }
-
  }
