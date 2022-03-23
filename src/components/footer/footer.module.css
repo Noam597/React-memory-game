@@ -13,9 +13,10 @@
     color: #bebbbb;
 }
 
-@media only screen and (width: 768px) {
+@media  screen and (max-width: 468px) {
     .footer{
-        width: 98%;
-        margin: 1%;
+        width: 100%;
+        padding: 0
+        ;
     }
 }

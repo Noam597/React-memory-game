@@ -123,9 +123,7 @@ import { luxuryCarsArray } from '../arrays/luxuryCarsArray';
                   Clicks: {clicks}
                   </h2>
                   <h2> Pairs found: {matches.length/2}</h2>
-                  
-             
-                  <button  onClick={reset}>reshuffle</button>
+                   <button  onClick={reset}>reshuffle</button>
                   </div>
               
         </div>
