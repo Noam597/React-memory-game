@@ -7,6 +7,7 @@ import { timeAttackArray,backCard } from '../arrays/timeAttackArray';
 
 export const TimeAttack = () => {
 
+
     let navigate = useNavigate()
 
     const gameTimerRef = useRef()

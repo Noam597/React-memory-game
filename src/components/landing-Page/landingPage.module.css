@@ -38,17 +38,21 @@
     
 }
 
-
-@media only screen and (max-width: 486px) {
+@media only screen and (max-width: 1024px) {
 
     .landingPage{
         width: 100%;
-        
-        flex-direction: column;
+        /* flex-direction: column; */
+        margin: auto;
     }
-    /* .difficultyCard{
+ 
+}
+@media only screen and (max-width: 486px) {
+
+    .landingPage{
         width: 99%;
         margin: 1%;
-        
-    } */
+        flex-direction: column;
+    }
+  
 }
