@@ -3,10 +3,6 @@
     width: 100%;
 
 }
-.gameBoard>h1{
-    font-size: 50px;
-    margin: 0 auto;
-}
 .gameBoard>p{
     font-size: 30px;
     margin: 0 auto;
@@ -15,8 +11,14 @@
 .gameBoard>p:hover{
     color: white;
 }
+.title{
+    font-size: 50px;
+    margin: 0 auto;
+    
+}
 .tablesize{
      margin: auto;
+     
      /* margin-top: 20px; */
     width: 1000px;
     display: grid;
@@ -40,8 +42,16 @@
     position: absolute;
     font-size: 30px;
     color: white;
-    /* bottom: 50%; */
+    bottom: 50%;
     left: 30%;
+    opacity: 1;
+}
+.lost {
+    position: absolute;
+    font-size: 30px;
+    color: white;
+     /* bottom: 40%; */
+    left: 35%; 
     opacity: 1;
 }
 .start {
@@ -49,13 +59,26 @@
     position: absolute;
     font-size: 50px;
     color: white;
-    /* top: 50%; */
+    bottom: 50%;
     left: 30%;
     opacity: 1;
     display: flex;
     flex-direction: column;
 }
-
+.timer{
+    font-size: 50px;
+    color: red;
+    padding: 30px;
+    margin: 10px auto;
+    animation-name: timer;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes timer{
+    0%{font-size: 50px;padding: 30px;}
+    50%{font-size: 40px;padding: 10px;}
+    100%{font-size: 50px;padding: 30px;}
+}
 
 .cardSize{
     width: 200px;
@@ -165,6 +188,12 @@
         top: 0;
         left: 0;
      }
+     .lost {
+        top: 0;
+        left: 0;
+     }
+
+
 
  }
 @media only screen and (max-width: 480px) {

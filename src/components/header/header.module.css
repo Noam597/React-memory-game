@@ -1,7 +1,10 @@
 .header{
     margin: 0;
-    background-image:linear-gradient(to bottom,blue,lightblue, silver,orange ,yellow);
+    margin-top: 10px;
+    padding: 20px;
+    background-image:linear-gradient(to bottom right,blue,lightblue, silver,orange ,yellow);
     text-align: center;
+    height: 70px;
 }
 
 .header h1{
@@ -14,9 +17,11 @@
 @media screen and (max-width: 468px) {
     .header{
         width: 100%;
+        
         /* margin:1%; */
     }
     .header h1{
         font-size: 20px;
+        
     }
 }
