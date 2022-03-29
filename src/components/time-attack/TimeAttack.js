@@ -19,8 +19,8 @@ export const TimeAttack = () => {
     const [lost, setLost] = useState(false)
     const [timeAninmation, setTimeAninmation] = useState('')
     const [clicks, setClicks] = useState(0)
-    const [seconds, setSeconds] = useState(12)
-    const [minutes, setMinutes] = useState(0);
+    const [seconds, setSeconds] = useState(50)
+    const [minutes, setMinutes] = useState(1);
   
     const empty ="";
    
