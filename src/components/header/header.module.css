@@ -15,6 +15,10 @@
 
 
 @media only screen and (max-width: 486px) {
+    .header{
+        height: 50px;  
+    }
+    
     .header h1{
         font-size: 35px;
     }

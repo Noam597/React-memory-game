@@ -11,7 +11,7 @@ export const LandingPage = () => {
   return (
     <div className={styles.landingPage}>
         {LandingPageArray.map((card,i)=>{
-            return(<>
+            return(
                 <div className={styles.difficultyCard}>
                     
                     <img src={card.img} alt={card.alt}
@@ -19,7 +19,7 @@ export const LandingPage = () => {
                     <p>{card.difficulty}</p>
                 </div>
                 
-                </>
+                
             )
         })}
     </div>

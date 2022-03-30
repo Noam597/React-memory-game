@@ -42,17 +42,22 @@
 
     .landingPage{
         width: 100%;
-        /* flex-direction: column; */
-        margin: auto;
+    }
+    .difficultyCard{
+        width: 100px;
+        height: 200px;
+        margin:25px 25px;
     }
  
 }
 @media only screen and (max-width: 486px) {
 
     .landingPage{
-        width: 99%;
-        margin: 1%;
         flex-direction: column;
     }
-  
+    .difficultyCard{
+        width: 150px;
+        height: 240px;
+        margin:25px 80px;
+    }
 }
