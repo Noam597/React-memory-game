@@ -83,7 +83,7 @@ import { luxuryCarsArray } from '../arrays/luxuryCarsArray';
                 
                  <h1>Start Game</h1>
                 <p><b>Click Here</b></p>
-                <p onClick={()=>{navigate('/React-memory-game')}}><b><u>Return to Main Menu</u></b></p>
+                <p onClick={()=>{navigate('/React-memory-game')}}><u>Return to Main Menu</u></p>
                 </div>
             </div>) } 
 
