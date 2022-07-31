@@ -4,7 +4,7 @@
 
 }
 .gameBoard>h1{
-    font-size: 50px;
+    font-size: 3rem;
     margin: 0 auto;
 }
 .gameBoard>p{
@@ -34,11 +34,15 @@
     z-index: 1;
     cursor: pointer;
 }
+.overlay h1{
+    opacity: 1;
+    z-index: 999;
+}
 
 
  .won {
-    position: absolute;
-    font-size: 30px;
+    position: sticky;
+    font-size: 2em;
     color: white;
     /* bottom: 50%; */
     left: 30%;
@@ -46,15 +50,17 @@
 }
 .start {
     width: 750px;
-    position: absolute;
+    position: sticky;
     font-size: 50px;
     color: white;
+    
     /* top: 50%; */
     left: 30%;
-    opacity: 1;
+    /* opacity: 1; */
     display: flex;
     flex-direction: column;
 }
+
 
 
 .cardSize{
@@ -161,7 +167,7 @@
      }
      .won{
         width: 100%;
-        font-size: 30px; 
+        font-size: 1em; 
         top: 0;
         left: 0;
      }
@@ -169,19 +175,18 @@
  }
 @media only screen and (max-width: 480px) {
     .tablesize{
-        width: 98%;
-       margin: 1%;
+        /* width: 98%; */
+       /* margin: 1%; */
         gap: 2px;
     }
     .cardSize{
-        width: 75px;
-        height:75px;
+        width: 55px;
+        height:55px;
     }
   
- 
+    .gameBoard>h1{
+        font-size: 2rem;
+    }
   
-   .stats{
-       width: 100%;
-      
-   }
+  
  }

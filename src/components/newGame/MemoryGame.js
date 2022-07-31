@@ -89,7 +89,7 @@ import { luxuryCarsArray } from '../arrays/luxuryCarsArray';
 
               {win &&(<div className={styles.overlay}>
                 <div className={styles.won} onClick={reset}>
-                <h1>you won congratulations!</h1>
+                <h1>you won congradulations!</h1>
                 <p>Number of Clicks: {clicks}</p>
                 <p>want to play again?</p>
                 <p ><b>Click Here</b></p>

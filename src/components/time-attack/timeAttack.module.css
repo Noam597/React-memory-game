@@ -12,17 +12,15 @@
     color: white;
 }
 .title{
-    font-size: 50px;
+    font-size: 2rem;
     margin: 0 auto;
     
 }
 .tablesize{
      margin: auto;
-     
-     /* margin-top: 20px; */
     width: 1000px;
     display: grid;
-    grid-template:  repeat(3, 1fr) / repeat(4, 1fr);
+    grid-template:  repeat(3, 1fr) / repeat(6, 1fr);
     gap: 10px;
   
 }
@@ -36,27 +34,31 @@
     z-index: 1;
     cursor: pointer;
 }
+.overlay h1,p{
+    opacity: 1;
+    z-index: 1;
+}
 
 
  .won {
-    position: absolute;
-    font-size: 30px;
+    position: sticky;
+    font-size: 2rem;
     color: white;
     bottom: 50%;
     left: 30%;
     opacity: 1;
+   
 }
 .lost {
     position: absolute;
-    font-size: 30px;
+    font-size: 2rem;
     color: white;
-     /* bottom: 40%; */
     left: 35%; 
     opacity: 1;
 }
 .start {
     width: 750px;
-    position: absolute;
+    position: sticky;
     font-size: 50px;
     color: white;
     bottom: 50%;
@@ -81,8 +83,8 @@
 }
 
 .cardSize{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 12px;
     margin: 2px;
     position: relative;
@@ -120,8 +122,6 @@
     cursor: pointer;
     transition: scale 0.5s,transform 0.5s,box-shadow 0.5s;
     background-image: linear-gradient(to bottom right,blue,silver,lightblue);
-    
-    
 }
 .cardSize .back{
     transition: 0.3s ease all;
@@ -166,6 +166,7 @@
         width: 98%;
         margin: 1%;
         gap: 2px;
+        grid-template:  repeat(3, 1fr) / repeat(4, 1fr);
     }
     .cardSize{
         width: 100px;
@@ -190,7 +191,8 @@
      }
      .lost {
         top: 0;
-        left: 0;
+        /* left: 0; */
+        font-size: 1rem;
      }
 
 
@@ -200,17 +202,24 @@
     .tablesize{
         width: 98%;
        margin: 1%;
-        gap: 2px;
+         gap: 2px;
     }
     .cardSize{
-        width: 75px;
-        height:75px;
+        width: 65px;
+        height:65px;
     }
-  
+    .cardSize .front ,
+    .cardSize .back{
+        box-shadow: 0 0 0  grey ;  
+    }
+    .won {
+        font-size: 1rem; 
+    }
+    .lost{
+        left:0;
+    }
+    .title{
+        font-size: 1.5rem;
+    }
  
-  
-   .stats{
-       width: 100%;
-      
-   }
  }

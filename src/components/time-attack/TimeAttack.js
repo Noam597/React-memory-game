@@ -149,7 +149,7 @@ export const TimeAttack = () => {
 
               {win &&(<div className={styles.overlay}>
                 <div className={styles.won} onClick={reset}>
-                <h1>you won congratulations!</h1>
+                <h1>you won congradulations!</h1>
                 <p>Number of Clicks: {clicks} Time:{minutes}:{numSec}</p>
                 <h2>All Matches Found</h2>
                 <p>want to play again?</p>
