@@ -2,3 +2,45 @@
     width: 100vw;
     height: 100vh;
 }
+
+.image{
+    margin: auto;
+    margin-top: 3rem;
+    width: 300px;
+    height: 300px;
+    background-image: linear-gradient(to bottom right,blue,silver,lightblue);
+    border-radius: 15px;
+    transform: rotate(-20deg);
+}
+.image div{
+    width:300px;
+    height: 300px;
+    transform: rotate(10deg);
+    /* background: url('https://images.unsplash.com/photo-1568265112889-c9d3fc50a281?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGFuaW1hbHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'); */
+    
+    
+    /* object-fit: cover; */
+}
+.image img{
+    border-radius: 15px;
+    width:  100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+    background-size: auto;
+    background-repeat: no-repeat;
+    margin-bottom: 3rem;
+}
+.aboutMe {
+    margin-top: 50px;
+}
+@media  screen and (max-width: 486px) {
+    .image{
+        width: 200px;
+        height: 200px;
+    }
+    .image div{
+        width: 200px;
+        height: 200px;
+    }
+}
