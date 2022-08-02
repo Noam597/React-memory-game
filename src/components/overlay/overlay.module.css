@@ -21,3 +21,10 @@
  .overlay p:last-child:active{
     color: gold;
  }
+ .overlay b{
+    margin: 0;
+    transition: all .45s;
+ }
+ .overlay b:hover{
+    margin: 0 20px;
+ }

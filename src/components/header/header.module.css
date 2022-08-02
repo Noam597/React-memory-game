@@ -31,12 +31,11 @@
 
 
 .navbar ul{
-   
+    display: flex;
     list-style: none;
     
 }
 .navbar li{
-  display: inline-block;
     cursor: pointer;
     padding: 10px 50px;
     font-size: 1.5rem;
@@ -44,20 +43,20 @@
     border-radius: 12px;
  
 }
-/* .navbar li:hover{
+.navbar li:hover{
     color: black;
     border-bottom: solid 1px gold;
     background-color: goldenrod;
-} */
+}
 @media  screen and (max-width: 1024px) {
     .header h1{
         font-size: 2rem;
     }
-    /* .navbar li:active{
+    .navbar li:active{
         color: black;
         border-bottom: solid 1px gold;
         background-color: goldenrod;
-    } */
+    }
 }
 @media  screen and (max-width: 486px) {
     .header{
@@ -79,20 +78,20 @@
         color:white;
         font-size: 1rem;
         position: absolute;
-        height: 0;
-        width: 0;
+        height: 100%;
+        width: 100%;
         background-color: rgba(80, 80, 239,0.7);
         top: 90px;
         right: 0;
-        /* transform: translateX(0);
-        transform: translateY(-200%); */
+        transform: translateY(-200%); 
         transition: all .45s;
         z-index: 999;
     }
     .navbar.menu{
-        /* transform: translateY(0); */
-        height: 100%;
-        width: 100%;
+        transform: translateY(0);
+    }
+    .navbar ul{
+        flex-direction: column;
     }
     .navbar li{
        

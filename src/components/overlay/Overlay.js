@@ -12,7 +12,7 @@ const Overlay = ({start,title,filler,filler2,matches,playAgain,mainMenu}) => {
                  <p>{filler}</p>
                 <p>{filler2}</p>
                 <h2>{matches}</h2>
-                <p><b><FaHandPointRight/>Click Here<FaHandPointLeft/></b></p> 
+                <p><FaHandPointRight/><b>Click Here</b><FaHandPointLeft/></p> 
                 <p  onClick={()=>{navigate('/React-memory-game')}}><u>Return to Main Menu</u></p>
                 </div>
             </div>
