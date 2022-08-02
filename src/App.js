@@ -1,6 +1,7 @@
 
 import { BrowserRouter as Router,useNavigate,Route,Routes} from 'react-router-dom';
 import styles from './app.module.css';
+import About from './components/about/About';
 import { Footer } from './components/footer/Footer';
 import { Header } from './components/header/Header';
 import { LandingPage } from './components/landing-Page/LandingPage';
@@ -13,11 +14,13 @@ import { TimeAttack } from './components/time-attack/TimeAttack';
 function App() {
   return (
     <div className={styles.app}>
-      
+       <Router>
+       
       <Header/>
-      <Router>
-      <Routes>
+     
+       <Routes>
       <Route path='React-memory-game' element={<LandingPage/>}/>
+      <Route path='React-memory-game/about' element={<About/>}/>
       <Route path='/React-memory-game/easy' element={<EasyMemoryGame/>}/>
       <Route path='/React-memory-game/medium' element={<MediumMemoryGame/>}/>
       <Route path='/React-memory-game/hard' element={<HardMemoryGame/>}/>

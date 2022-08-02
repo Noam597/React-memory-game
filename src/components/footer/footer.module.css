@@ -3,9 +3,27 @@
     background-color: black;
     text-align: center;
     padding: 10px; 
+   
 }
 
 .footer p{
     color: #bebbbb;
 }
 
+.footer li{
+    display: inline-block;
+    margin: 0 2rem;
+    font-size: 2rem;
+    
+}
+.footer li a{
+    color: white;
+}
+
+@media only screen and (max-width: 486px) {
+    .footer li{
+        font-size: 1rem;
+        margin: 0 1.5rem;
+    }
+
+}

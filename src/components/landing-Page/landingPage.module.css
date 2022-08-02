@@ -44,8 +44,8 @@
         width: 100%;
     }
     .difficultyCard{
-        width: 150px;
-        height: 200px;
+        width: 200px;
+        height: 250px;
         margin:25px 25px;
     }
     .difficultyCard>p{

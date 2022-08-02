@@ -2,6 +2,7 @@ import React,{useState,useEffect,useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
 import {shuffle} from 'lodash'
 import styles from './timeAttack.module.css'
+import Overlay from '../overlay/Overlay';
 import { timeAttackArray,backCard } from '../arrays/timeAttackArray';
 
 
@@ -20,8 +21,8 @@ export const TimeAttack = () => {
     const [lost, setLost] = useState(false)
     const [timeAninmation, setTimeAninmation] = useState('')
     const [clicks, setClicks] = useState(0)
-    const [seconds, setSeconds] = useState(50)
-    const [minutes, setMinutes] = useState(1);
+    const [seconds, setSeconds] = useState(5)
+    const [minutes, setMinutes] = useState(0);
   
     const empty ="";
    
@@ -138,16 +139,20 @@ export const TimeAttack = () => {
 
     return (
         <div className={styles.gameBoard}>
-            {start &&(<div className={styles.overlay}>
+            {/* {start &&(<div className={styles.overlay}>
                 <div className={styles.start} onClick={begin}>
                 
                  <h1>Start Game</h1>
                 <p><b>Click Here</b></p>
                 <p onClick={()=>{navigate('/React-memory-game')}}><b><u>Return to Main Menu</u></b></p>
                 </div>
-            </div>) } 
-
-              {win &&(<div className={styles.overlay}>
+            </div>) }  */}
+            {start &&(<Overlay
+            start={styles.start}
+            playAgain={begin}
+            title='Start Game'
+            />)}
+              {/* {win &&(<div className={styles.overlay}>
                 <div className={styles.won} onClick={reset}>
                 <h1>you won congradulations!</h1>
                 <p>Number of Clicks: {clicks} Time:{minutes}:{numSec}</p>
@@ -156,9 +161,17 @@ export const TimeAttack = () => {
                 <p ><b>Click Here</b></p>
                 <p onClick={()=>{navigate('/React-memory-game')}}><b><u>Return to Main Menu</u></b></p>
                 </div>
-            </div>) }
+            </div>) } */}
+            {win &&(<Overlay
+            start={styles.won}
+            playAgain={reset}
+            title='you won congradulations!'
+            filler={`Number of Clicks: ${clicks}    Time:${minutes}:${numSec}`}
+            filler2='want to play again?'
+            matches='All Matches Found'
+            />)}
 
-            {lost &&(<div className={styles.overlay}>
+            {/* {lost &&(<div className={styles.overlay}>
                 <div className={styles.lost} onClick={reset}>
                 <h1>Times Up! You Lose</h1>
                 <p>Number of Clicks: {clicks}</p>
@@ -167,7 +180,14 @@ export const TimeAttack = () => {
                 <p ><b>Click Here</b></p>
                 <p onClick={()=>{navigate('/React-memory-game')}}><b><u>Return to Main Menu</u></b></p>
                 </div>
-            </div>) }
+            </div>) } */}
+            {lost &&(<Overlay
+            start={styles.lost}
+                playAgain={reset}
+                title='Times Up! You Lose!'
+                matches={`Matches Found ${matches.length}`}
+                filler2='want to play again?'
+            />)}
             <p onClick={()=>{navigate('/React-memory-game')}}><b><u>Return to Main Menu</u></b></p>
              <h1 className={styles.title}>Difficulty: Time Attack <span className={timeAninmation}>{minutes}:{numSec}</span></h1>
             <div className={styles.tablesize} >

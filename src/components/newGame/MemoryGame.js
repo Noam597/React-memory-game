@@ -2,7 +2,8 @@ import React,{useState,useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import {shuffle} from 'lodash'
 import styles from './testMemoryGame.module.css'
-import { luxuryCarsArray } from '../arrays/luxuryCarsArray';
+import {FaHandPointLeft,FaHandPointRight} from 'react-icons/fa'
+import Overlay from '../overlay/Overlay';
 
  function MemoryGame({array,difficulty}) {
 
@@ -78,24 +79,34 @@ import { luxuryCarsArray } from '../arrays/luxuryCarsArray';
 
     return (
         <div className={styles.gameBoard}>
-            {start &&(<div className={styles.overlay}>
+            {/* {start &&(<div className={styles.overlay}>
                 <div className={styles.start} onClick={begin}>
-                
                  <h1>Start Game</h1>
-                <p><b>Click Here</b></p>
+                <p><b><FaHandPointRight/>Click Here<FaHandPointLeft/></b></p>
                 <p onClick={()=>{navigate('/React-memory-game')}}><u>Return to Main Menu</u></p>
                 </div>
-            </div>) } 
-
-              {win &&(<div className={styles.overlay}>
+            </div>) }  */}
+            {start &&(<Overlay
+            start={styles.start}
+            playAgain={begin}
+            title='Start Game'
+            />)}
+              {/* {win &&(<div className={styles.overlay}>
                 <div className={styles.won} onClick={reset}>
                 <h1>you won congradulations!</h1>
                 <p>Number of Clicks: {clicks}</p>
                 <p>want to play again?</p>
-                <p ><b>Click Here</b></p>
+                <p ><b><FaHandPointRight/>Click Here<FaHandPointLeft/></b></p>
                 <p onClick={()=>{navigate('/React-memory-game')}}><b><u>Return to Main Menu</u></b></p>
                 </div>
-            </div>) }
+            </div>) } */}
+            {win &&(<Overlay
+            start={styles.won}
+            playAgain={reset}
+            title='you won congradulations!'
+            filler={`Number of Clicks: ${clicks}`}
+            filler2='want to play again?'
+            />)}
             
             <p onClick={()=>{navigate('/React-memory-game')}}><b><u>Return to Main Menu</u></b></p>
              <h1>Difficulty: {difficulty}</h1>

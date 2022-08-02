@@ -1,7 +1,7 @@
 .header{
-  
+    display: flex;
+    justify-content: space-between;
     margin: 0;
-    
     padding: 20px;
     background-image:linear-gradient(to bottom right,blue,lightblue, silver,orange ,yellow);
     text-align: center;
@@ -12,15 +12,95 @@
     font-size: 3rem;
     margin: 0;
 }
+.header button{
+    display: none;
+     border: none;
+    background-color: inherit;
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.header button:active{
+  background-color: yellow;
+  color: orange;
+}
+.navbar{
+    color:white;    
+}
 
 
-@media only screen and (max-width: 486px) {
+.navbar ul{
+   
+    list-style: none;
+    
+}
+.navbar li{
+  display: inline-block;
+    cursor: pointer;
+    padding: 10px 50px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    border-radius: 12px;
+ 
+}
+/* .navbar li:hover{
+    color: black;
+    border-bottom: solid 1px gold;
+    background-color: goldenrod;
+} */
+@media  screen and (max-width: 1024px) {
+    .header h1{
+        font-size: 2rem;
+    }
+    /* .navbar li:active{
+        color: black;
+        border-bottom: solid 1px gold;
+        background-color: goldenrod;
+    } */
+}
+@media  screen and (max-width: 486px) {
     .header{
-
+        display: flex;
+        justify-content: space-between;
         height: 50px;  
+    }
+    .header button{
+        display: block;
+        padding: 0.5rem;
+        font-size: 1.5rem;
     }
     
     .header h1{
         font-size: 2rem;
     }
+    .navbar{
+        text-align: center;
+        color:white;
+        font-size: 1rem;
+        position: absolute;
+        height: 0;
+        width: 0;
+        background-color: rgba(80, 80, 239,0.7);
+        top: 90px;
+        right: 0;
+        /* transform: translateX(0);
+        transform: translateY(-200%); */
+        transition: all .45s;
+        z-index: 999;
+    }
+    .navbar.menu{
+        /* transform: translateY(0); */
+        height: 100%;
+        width: 100%;
+    }
+    .navbar li{
+       
+        display: block;
+        width: 100px;
+         padding: 20px;
+         margin: 20px auto;
+         cursor: pointer;
+        
+     }
 }

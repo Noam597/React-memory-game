@@ -3,6 +3,8 @@
   text-align: center;
   width: 100%;
   margin: 0;
+  outline: 0;
+  position: relative;
 }
 body{
   margin: 0;

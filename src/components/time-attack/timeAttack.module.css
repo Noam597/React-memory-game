@@ -67,6 +67,12 @@
     display: flex;
     flex-direction: column;
 }
+.start p:last-child:hover{
+    color: gold;
+ }
+ .start p:last-child:active{
+    color: gold;
+ }
 .timer{
     font-size: 50px;
     color: red;
