@@ -79,27 +79,13 @@ import Overlay from '../overlay/Overlay';
 
     return (
         <div className={styles.gameBoard}>
-            {/* {start &&(<div className={styles.overlay}>
-                <div className={styles.start} onClick={begin}>
-                 <h1>Start Game</h1>
-                <p><b><FaHandPointRight/>Click Here<FaHandPointLeft/></b></p>
-                <p onClick={()=>{navigate('/React-memory-game')}}><u>Return to Main Menu</u></p>
-                </div>
-            </div>) }  */}
+       
             {start &&(<Overlay
             start={styles.start}
             playAgain={begin}
             title='Start Game'
             />)}
-              {/* {win &&(<div className={styles.overlay}>
-                <div className={styles.won} onClick={reset}>
-                <h1>you won congradulations!</h1>
-                <p>Number of Clicks: {clicks}</p>
-                <p>want to play again?</p>
-                <p ><b><FaHandPointRight/>Click Here<FaHandPointLeft/></b></p>
-                <p onClick={()=>{navigate('/React-memory-game')}}><b><u>Return to Main Menu</u></b></p>
-                </div>
-            </div>) } */}
+          
             {win &&(<Overlay
             start={styles.won}
             playAgain={reset}

@@ -21,8 +21,8 @@ export const TimeAttack = () => {
     const [lost, setLost] = useState(false)
     const [timeAninmation, setTimeAninmation] = useState('')
     const [clicks, setClicks] = useState(0)
-    const [seconds, setSeconds] = useState(5)
-    const [minutes, setMinutes] = useState(0);
+    const [seconds, setSeconds] = useState(50)
+    const [minutes, setMinutes] = useState(1);
   
     const empty ="";
    
@@ -139,29 +139,13 @@ export const TimeAttack = () => {
 
     return (
         <div className={styles.gameBoard}>
-            {/* {start &&(<div className={styles.overlay}>
-                <div className={styles.start} onClick={begin}>
-                
-                 <h1>Start Game</h1>
-                <p><b>Click Here</b></p>
-                <p onClick={()=>{navigate('/React-memory-game')}}><b><u>Return to Main Menu</u></b></p>
-                </div>
-            </div>) }  */}
+         
             {start &&(<Overlay
             start={styles.start}
             playAgain={begin}
             title='Start Game'
             />)}
-              {/* {win &&(<div className={styles.overlay}>
-                <div className={styles.won} onClick={reset}>
-                <h1>you won congradulations!</h1>
-                <p>Number of Clicks: {clicks} Time:{minutes}:{numSec}</p>
-                <h2>All Matches Found</h2>
-                <p>want to play again?</p>
-                <p ><b>Click Here</b></p>
-                <p onClick={()=>{navigate('/React-memory-game')}}><b><u>Return to Main Menu</u></b></p>
-                </div>
-            </div>) } */}
+
             {win &&(<Overlay
             start={styles.won}
             playAgain={reset}
@@ -170,17 +154,7 @@ export const TimeAttack = () => {
             filler2='want to play again?'
             matches='All Matches Found'
             />)}
-
-            {/* {lost &&(<div className={styles.overlay}>
-                <div className={styles.lost} onClick={reset}>
-                <h1>Times Up! You Lose</h1>
-                <p>Number of Clicks: {clicks}</p>
-                <h2>Matches Found {matches.length}</h2>
-                <p>want to play again?</p>
-                <p ><b>Click Here</b></p>
-                <p onClick={()=>{navigate('/React-memory-game')}}><b><u>Return to Main Menu</u></b></p>
-                </div>
-            </div>) } */}
+            
             {lost &&(<Overlay
             start={styles.lost}
                 playAgain={reset}
