@@ -35,6 +35,9 @@
     margin-top: 50px;
 }
 @media  screen and (max-width: 486px) {
+    .about{
+        height: 100%;
+    }
     .image{
         width: 200px;
         height: 200px;

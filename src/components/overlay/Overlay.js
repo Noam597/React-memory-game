@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import {FaHandPointLeft,FaHandPointRight} from 'react-icons/fa'
 import styles from './overlay.module.css'
-const Overlay = ({start,title,filler,filler2,matches,playAgain,mainMenu}) => {
+const Overlay = ({start,title,filler,filler2,matches,playAgain}) => {
 
     let navigate = useNavigate()
   return (

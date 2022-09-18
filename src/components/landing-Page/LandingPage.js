@@ -12,7 +12,7 @@ export const LandingPage = () => {
     <div className={styles.landingPage}>
         {LandingPageArray.map((card,i)=>{
             return(
-                <div className={styles.difficultyCard}>
+                <div className={styles.difficultyCard} key={i}>
                     
                     <img src={card.img} alt={card.alt}
                      onClick={()=>{navigate(card.link)}}/>

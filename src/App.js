@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router,useNavigate,Route,Routes} from 'react-router-dom';
+import { BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import styles from './app.module.css';
 import About from './components/about/About';
 import { Footer } from './components/footer/Footer';
@@ -8,7 +8,6 @@ import { LandingPage } from './components/landing-Page/LandingPage';
 import { EasyMemoryGame } from './components/memory-game-difficulty/EasyMemoryGame';
 import { HardMemoryGame } from './components/memory-game-difficulty/HardMemoryGame';
 import { MediumMemoryGame } from './components/memory-game-difficulty/MediumMemoryGame';
-import MemoryGame from './components/newGame/MemoryGame';
 import { TimeAttack } from './components/time-attack/TimeAttack';
 
 function App() {

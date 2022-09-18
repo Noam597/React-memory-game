@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useRef} from 'react';
+import React,{useState,useEffect,useRef,useCallback} from 'react';
 import { useNavigate } from 'react-router-dom';
 import {shuffle} from 'lodash'
 import styles from './timeAttack.module.css'
@@ -70,32 +70,7 @@ export const TimeAttack = () => {
         setSeconds(prevSeconds =>prevSeconds - 1);
     } 
 
-       useEffect(() => {
-                gameTimerRef.current =  setInterval(beginCountDown,1000)
-            if(seconds === 0 && minutes === 0){
-                clearInterval(gameTimerRef.current)
-            }
-                if(win){
-                    clearInterval(gameTimerRef.current)
-                }
-                // setWin(true)
-                if(seconds <=10 && seconds > 0 && minutes === 0){
-                    setTimeAninmation(`${styles.timer}`)
-                }else{
-                    setTimeAninmation(``)
-                }
-        return ()=>{clearInterval(gameTimerRef.current)}
-    },[seconds])
-
-    const beginCountDown = async ()=>{
-        if(start === false){
-           setSeconds(prevSeconds =>prevSeconds - 1);
-             countDown()
-             console.log(seconds)
-      }
-    
-}
-  const countDown = ()=>{
+  const countDown = useCallback(()=>{
         if(seconds === 0){
             setMinutes(minutes - 1)
             setSeconds(59)
@@ -107,7 +82,37 @@ export const TimeAttack = () => {
         else if(seconds === 1 && minutes === 0 && matches.length + 2 !== cards.length){
             setLost(true);  
         } 
-    }
+    },[seconds,minutes,cards,matches])
+
+  const beginCountDown =  useCallback(()=>{
+        if(start === false){
+           setSeconds(prevSeconds =>prevSeconds - 1);
+             countDown()
+             console.log(seconds)
+      }
+    
+},[seconds,countDown,start])
+
+       useEffect(() => {
+                gameTimerRef.current =  setInterval(beginCountDown,1000)
+            if(seconds === 0 && minutes === 0){
+                clearInterval(gameTimerRef.current)
+            }
+                if(win){
+                    clearInterval(gameTimerRef.current)
+                }
+
+                if(seconds <=10 && seconds > 0 && minutes === 0){
+                    setTimeAninmation(`${styles.timer}`)
+                }else{
+                    setTimeAninmation(``)
+                }
+        return ()=>{clearInterval(gameTimerRef.current)}
+    },[beginCountDown,seconds,minutes,win])
+
+  
+
+
 
     const reset = ()=>{
         setFlippedCard([])

@@ -2,7 +2,6 @@ import React,{useState,useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import {shuffle} from 'lodash'
 import styles from './testMemoryGame.module.css'
-import {FaHandPointLeft,FaHandPointRight} from 'react-icons/fa'
 import Overlay from '../overlay/Overlay';
 
  function MemoryGame({array,difficulty}) {
