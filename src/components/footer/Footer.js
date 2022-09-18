@@ -10,7 +10,7 @@ export const Footer = () => {
         <li><a href='https://www.facebook.com'><FaFacebook/></a></li>
         <li><a href='https://www.instagram.com'><FaInstagramSquare/></a></li>
         <li><a href='https://www.twitter.com'><FaTwitter/></a></li>
-        <li><a href='https://www.github.com/Noam597/React-memory-game'><FaTwitter/></a></li>
+        <li><a href='https://www.github.com/Noam597/React-memory-game'><FaGithub/></a></li>
         </ul>
     </div>
   )}
