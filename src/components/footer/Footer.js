@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./footer.module.css"
-import { FaFacebook,FaInstagramSquare,FaTwitter } from 'react-icons/fa';
+import { FaFacebook,FaInstagramSquare,FaTwitter,FaGithub } from 'react-icons/fa';
 export const Footer = () => {
   return (
     <div className={styles.footer}>
@@ -10,6 +10,7 @@ export const Footer = () => {
         <li><a href='https://www.facebook.com'><FaFacebook/></a></li>
         <li><a href='https://www.instagram.com'><FaInstagramSquare/></a></li>
         <li><a href='https://www.twitter.com'><FaTwitter/></a></li>
+        <li><a href='https://www.github.com/Noam597/React-memory-game'><FaTwitter/></a></li>
         </ul>
     </div>
   )}
