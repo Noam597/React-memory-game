@@ -88,7 +88,7 @@ import Overlay from '../overlay/Overlay';
             {win &&(<Overlay
             start={styles.won}
             playAgain={reset}
-            title='you won congradulations!'
+            title='You Won Congratulations!'
             filler={`Number of Clicks: ${clicks}`}
             filler2='want to play again?'
             />)}

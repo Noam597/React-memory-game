@@ -154,7 +154,7 @@ export const TimeAttack = () => {
             {win &&(<Overlay
             start={styles.won}
             playAgain={reset}
-            title='you won congradulations!'
+            title='You Won Congratulations!'
             filler={`Number of Clicks: ${clicks}    Time:${minutes}:${numSec}`}
             filler2='want to play again?'
             matches='All Matches Found'
